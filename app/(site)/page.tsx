@@ -1,7 +1,61 @@
+import About from '@/components/Home/About';
+import Contact from '@/components/Home/Contact';
+import Hero from '@/components/Home/Hero';
+
 export default function Home() {
   return (
     <div>
-      <h1>Home</h1>
+      <Hero />
+      <About />
+      <Contact />
+      <Hero />
+      <About />
+      <Contact />
+      <Hero />
+      <About />
+      <Contact />
+      <Hero />
+      <About />
+      <Contact />
+      <Hero />
+      <About />
+      <Contact />
+      <Hero />
+      <About />
+      <Contact />
+      <Hero />
+      <About />
+      <Contact />
+      <Hero />
+      <About />
+      <Contact />
+      <Hero />
+      <About />
+      <Contact />
+      <Hero />
+      <About />
+      <Contact />
+      <Hero />
+      <About />
+      <Contact />
+      <Hero />
+      <About />
+      <Contact />
+      <Hero />
+      <About />
+      <Contact />
+      <Hero />
+      <About />
+      <Contact />
+      <Hero />
+      <About />
+      <Contact />
+      <Hero />
+      <About />
+      <Contact />
+      <Hero />
+      <About />
+      <Contact />
     </div>
   );
 }

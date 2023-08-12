@@ -60,7 +60,7 @@
     "import/no-duplicates": "error",
     "import/no-mutable-exports": "error",
     "@typescript-eslint/no-unused-vars": [
-      "warn",
+      "error",
       { "argsIgnorePattern": "^_" }
     ],
     "@typescript-eslint/no-explicit-any": "error",

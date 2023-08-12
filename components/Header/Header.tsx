@@ -5,7 +5,7 @@ import igIcon from '@/public/icons/ig-icon.svg';
 import pinIcon from '@/public/icons/pin-icon.svg';
 import ytIcon from '@/public/icons/yt-icon.svg';
 import Navigation from './Navigation';
-import SocialIcons from './SocialIcons';
+import SocialIcons from '../Common/SocialIcons';
 
 export default function header() {
   return (
