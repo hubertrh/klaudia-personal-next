@@ -4,24 +4,18 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  --background-rgb: 255, 255, 255;
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: rgb(var(--background-end-rgb));
+}
+
+.nav > * {
+  @apply relative px-6 py-6 duration-300 before:absolute before:bottom-5 before:left-1/2 before:h-[1.5px] before:w-0 before:-translate-x-1/2 before:bg-primary before:transition-all before:duration-300 before:ease-out before:content-[''] first:!ml-0 first:!mr-10 hover:text-primary hover:before:w-full;
+}
+
+.social-icons > * {
+  @apply scale-110 px-6 py-3 brightness-50 duration-200 hover:rotate-12 hover:brightness-100;
 }
