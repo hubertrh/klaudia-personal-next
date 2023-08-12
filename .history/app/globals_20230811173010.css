@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 255, 255, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-end-rgb));
+}
+
+.nav > * {
+  @apply relative px-6 transition-all duration-300 before:absolute before:-bottom-2 before:left-1/2 before:h-[1.5px] before:w-0 before:-translate-x-1/2 before:bg-primary before:transition-all before:duration-300 before:ease-out before:content-[''] hover:text-primary hover:before:w-[140%];
+}
+
+.social-icon {
+  @apply pl-10;
+}
