@@ -1,7 +1,15 @@
-export default function Portfolio() {
+import { getEntries } from '@/sanity/sanity-utils';
+import { Entry } from '@/types/Entry';
+
+export default async function Portfolio() {
+  const entries: Entry[] = await getEntries();
+
   return (
     <div>
-      <h1>Portfolio Page</h1>
+      <h1>Portfolio page</h1>
+      {entries.map((entry: Entry) => (
+        <div key={entry._id}>{entry.title}</div>
+      ))}
     </div>
   );
 }
