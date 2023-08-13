@@ -12,6 +12,10 @@ body {
   background: rgb(var(--background-end-rgb));
 }
 
+body * {
+  @apply scroll-mt-20;
+}
+
 .nav > * {
   @apply relative px-6 py-6 duration-300 before:absolute before:bottom-5 before:left-1/2 before:h-[1.5px] before:w-0 before:-translate-x-1/2 before:bg-primary before:transition-all before:duration-300 before:ease-out before:content-[''] first:!ml-0 first:!mr-10 hover:text-primary hover:before:w-full;
 }
