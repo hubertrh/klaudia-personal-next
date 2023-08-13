@@ -1,3 +1,3 @@
 export default function Contact() {
-  return <div className="h-screen">Contact</div>;
+  return <section className="h-screen">Contact</section>;
 }

@@ -1,3 +1,3 @@
 export default function About() {
-  return <div className="h-screen">About</div>;
+  return <section className="h-screen">About</section>;
 }

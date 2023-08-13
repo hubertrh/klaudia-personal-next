@@ -3,7 +3,7 @@ import SocialIcons from '../Common/SocialIcons';
 
 export default function Footer() {
   return (
-    <div className="absolute -bottom-40 w-screen bg-zinc-800 text-zinc-200">
+    <footer className="absolute -bottom-40 w-screen bg-zinc-800 text-zinc-200">
       <div className="mx-auto grid h-40 max-w-screen-xl grid-cols-3 p-3">
         <div className="grid h-full items-end">
           <Link href="#!">Cookie policy</Link>
@@ -26,6 +26,6 @@ export default function Footer() {
           </Link>
         </div>
       </div>
-    </div>
+    </footer>
   );
 }
