@@ -8,54 +8,6 @@ export default function Home() {
       <Hero />
       <About />
       <Contact />
-      <Hero />
-      <About />
-      <Contact />
-      <Hero />
-      <About />
-      <Contact />
-      <Hero />
-      <About />
-      <Contact />
-      <Hero />
-      <About />
-      <Contact />
-      <Hero />
-      <About />
-      <Contact />
-      <Hero />
-      <About />
-      <Contact />
-      <Hero />
-      <About />
-      <Contact />
-      <Hero />
-      <About />
-      <Contact />
-      <Hero />
-      <About />
-      <Contact />
-      <Hero />
-      <About />
-      <Contact />
-      <Hero />
-      <About />
-      <Contact />
-      <Hero />
-      <About />
-      <Contact />
-      <Hero />
-      <About />
-      <Contact />
-      <Hero />
-      <About />
-      <Contact />
-      <Hero />
-      <About />
-      <Contact />
-      <Hero />
-      <About />
-      <Contact />
     </div>
   );
 }

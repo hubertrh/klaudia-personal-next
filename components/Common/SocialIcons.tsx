@@ -1,5 +1,3 @@
-import Link from 'next/link';
-import Image from 'next/image';
 import igIcon from '@/public/icons/ig-icon.svg';
 import fbIcon from '@/public/icons/fb-icon.svg';
 import ytIcon from '@/public/icons/yt-icon.svg';
