@@ -2,18 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-rgb: 255, 255, 255;
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-end-rgb));
+  @apply bg-zinc-50 text-zinc-900;
 }
 
 body * {
-  @apply scroll-mt-20;
+  @apply scroll-mt-20 selection:bg-primary selection:text-zinc-100;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply py-4;
+}
+
+p {
+  @apply py-1.5;
 }
 
 .nav > * {

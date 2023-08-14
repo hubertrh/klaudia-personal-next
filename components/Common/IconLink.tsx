@@ -15,7 +15,7 @@ export default function IconLink({ href, src, alt, isFooter }: IconLinkProps) {
   isFooter
     ? (IconLinkVariantClass = 'grayscale brightness-500 hover:brightness-700')
     : (IconLinkVariantClass =
-        'brightness-50 hover:rotate-12 hover:brightness-100');
+        'brightness-100 hover:rotate-12 hover:brightness-75');
 
   return (
     <Link
