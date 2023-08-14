@@ -1,5 +1,5 @@
-import Image from 'next/image';
 import klaudiaAboutImage from '@/public/images/klaudia-about.jpg';
+import Image from 'next/image';
 
 export default function Contact() {
   return (

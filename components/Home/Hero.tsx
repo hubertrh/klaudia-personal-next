@@ -1,5 +1,5 @@
-import Image from 'next/image';
 import klaudiaHeroImage from '@/public/images/klaudia-hero.jpg';
+import Image from 'next/image';
 
 export default function Hero() {
   return (

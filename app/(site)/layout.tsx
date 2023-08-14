@@ -1,8 +1,9 @@
-import '../globals.css';
-import type { Metadata } from 'next';
-import { Raleway, Kalam } from 'next/font/google';
-import Header from '@/components/Header/Header';
 import Footer from '@/components/Footer/Footer';
+import Header from '@/components/Header/Header';
+import { Analytics } from '@vercel/analytics/react';
+import type { Metadata } from 'next';
+import { Kalam, Raleway } from 'next/font/google';
+import '../globals.css';
 
 const raleway = Raleway({ weight: '300', subsets: ['latin'] });
 const kalam = Kalam({
@@ -29,6 +30,7 @@ export default function RootLayout({
           <main className="mx-auto max-w-[70vw]">{children}</main>
         </div>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
