@@ -29,7 +29,6 @@ export default function About() {
         </p>
       </div>
       <Image
-        // className="h-min max-h-[60vh] w-min max-w-[60vw] translate-y-5 object-contain"
         src={klaudiaAboutImage}
         alt="Picture of Klaudia"
         fill={false}
