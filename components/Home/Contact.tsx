@@ -1,26 +1,26 @@
 import klaudiaAboutImage from '@/public/images/klaudia-about.jpg';
+import { getContactEntry } from '@/sanity/sanity-utils';
+import { ContactEntry } from '@/types/ContactEntry';
+import { PortableText } from '@portabletext/react';
 import Image from 'next/image';
 
-export default function Contact() {
+export default async function Contact() {
+  const contactEntry: ContactEntry | null = await getContactEntry();
+
   return (
     <section
       id="contact"
       className="grid h-screen grid-flow-col items-center justify-center text-justify"
     >
-      <div className="mr-[8vw]">
-        <h2 className="py-4 text-4xl text-primary">Contact me!</h2>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae
-          voluptatum fugiat doloribus voluptate dolorem sed nisi quia nemo at
-          itaque, possimus sequi expedita est sapiente labore et laudantium a
-          dignissimos quam, vel tempore, vero necessitatibus porro incidunt
-          nobis. Harum, eos. Iure, veniam.
-        </p>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore
-          ducimus adipisci eveniet sequi omnis, qui consequuntur dolores
-          doloribus veniam voluptatibus minus.
-        </p>
+      <div className="mr-[8vw] max-w-prose">
+        <h2 className="py-4 text-4xl text-primary">
+          {contactEntry?.contactMeTitle}
+        </h2>
+        {contactEntry ? (
+          <PortableText value={contactEntry.contactMeDescription} />
+        ) : (
+          <p>Loading details...</p>
+        )}
       </div>
       <Image
         className="opacity-50"
