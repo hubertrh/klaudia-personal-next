@@ -7,7 +7,7 @@ export default function Contact() {
       id="contact"
       className="grid h-screen grid-flow-col items-center justify-center text-justify"
     >
-      <div className="mr-[8vw] max-w-prose">
+      <div className="mr-[8vw]">
         <h2 className="py-4 text-4xl text-primary">Contact me!</h2>
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae
