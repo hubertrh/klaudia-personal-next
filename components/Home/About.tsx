@@ -10,7 +10,7 @@ export default async function About() {
   return (
     <section
       id="aboutme"
-      className="grid h-screen grid-flow-col items-center justify-center text-justify"
+      className="mx-auto grid h-screen max-w-[80vw] items-center justify-center text-justify sm:grid-flow-col"
     >
       <div className="mr-[8vw] max-w-prose">
         <h2 className="py-4 text-4xl text-primary">
