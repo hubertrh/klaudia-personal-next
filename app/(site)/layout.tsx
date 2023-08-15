@@ -27,7 +27,7 @@ export default function RootLayout({
       <body className={`${raleway.className} relative min-h-screen`}>
         <div className="mx-auto max-w-screen-xl">
           <Header />
-          <main className="mx-auto max-w-[70vw]">{children}</main>
+          <main className="mx-auto sm:max-w-[70vw]">{children}</main>
         </div>
         <Footer />
         <Analytics />

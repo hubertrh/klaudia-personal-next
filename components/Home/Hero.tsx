@@ -9,7 +9,7 @@ export default async function Hero() {
   return (
     <section className="grid h-screen place-items-center">
       <Image
-        className="h-min max-h-[60vh] w-min max-w-[60vw] translate-y-5 object-contain"
+        className="h-min max-h-[60vh] w-min translate-y-5 object-contain sm:max-w-[60vw]"
         src={heroEntry?.heroImage.url || klaudiaHeroImage}
         alt={heroEntry?.heroImage.alt || 'Main picture of Klaudia'}
         width={heroEntry?.heroImage.metadata.dimensions.width}
