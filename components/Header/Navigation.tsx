@@ -28,7 +28,7 @@ export default function Navigation() {
   // }, []);
 
   return (
-    <div className="relative mx-3 h-[8vw] w-[8vw] bg-slate-100 before:absolute before:bottom-2 before:left-1/2 before:h-[1.5px] before:w-full before:-translate-x-1/2 before:bg-primary before:transition-all before:duration-300 before:ease-out before:content-[''] after:absolute after:left-1/2 after:top-2 after:h-[1.5px] after:w-full after:-translate-x-1/2 after:bg-primary after:transition-all after:duration-300 after:ease-out after:content-['']"></div>
+    <div className="relative mx-3 h-[8vw] w-[8vw] before:absolute before:bottom-2 before:left-1/2 before:h-[1.5px] before:w-full before:-translate-x-1/2 before:bg-primary before:transition-all before:duration-300 before:ease-out before:content-[''] after:absolute after:left-1/2 after:top-2 after:h-[1.5px] after:w-full after:-translate-x-1/2 after:bg-primary after:transition-all after:duration-300 after:ease-out after:content-['']"></div>
 
     // <nav className="nav text-xl sm:flex">
     //   {navLinks.map((link) => {
