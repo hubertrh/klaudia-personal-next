@@ -3,18 +3,18 @@ import SocialIcons from '../Common/SocialIcons';
 
 export default function Footer() {
   return (
-    <footer className="absolute -bottom-40 w-screen bg-zinc-800 text-zinc-200">
-      <div className="mx-auto grid h-40 max-w-screen-xl grid-cols-3 p-3">
-        <div className="grid h-full items-end">
-          <Link href="#!">Cookie policy</Link>
-        </div>
+    <footer className="absolute top-full w-screen bg-zinc-800 text-zinc-200">
+      <div className="mx-auto flex h-40 max-w-screen-xl flex-col p-3">
         <div className="grid h-full place-content-center text-center">
-          <p className="m-2 text-xl">
+          <p className="p-0 sm:m-2 sm:text-xl">
             Klaudia Rogala-Haracz &copy; {new Date().getFullYear().toString()}
           </p>
           <SocialIcons isFooter={true} />
         </div>
-        <div className="flex h-full flex-col justify-end text-right">
+        <div className="flex items-end justify-between text-xs sm:text-base">
+          <div className="grid items-end text-xs sm:text-base">
+            <Link href="#!">Cookie policy</Link>
+          </div>
           <Link
             className="text-zinc-400"
             href="https://github.com/rogalaharacz/"
