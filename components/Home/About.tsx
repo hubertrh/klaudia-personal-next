@@ -10,9 +10,9 @@ export default async function About() {
   return (
     <section
       id="aboutme"
-      className="mx-auto grid h-screen max-w-[80vw] items-center justify-center text-justify sm:grid-flow-col"
+      className="mx-auto grid max-w-[80vw] items-center justify-center gap-[8vw] pb-12 text-justify sm:mb-0 sm:h-screen sm:grid-flow-col"
     >
-      <div className="mr-[8vw] max-w-prose">
+      <div className="max-w-prose">
         <h2 className="py-4 text-4xl text-primary">
           {aboutEntry?.aboutMeTitle}
         </h2>
