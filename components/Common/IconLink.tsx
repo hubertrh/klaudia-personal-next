@@ -20,7 +20,7 @@ export default function IconLink({ href, src, alt, isFooter }: IconLinkProps) {
   return (
     <Link
       href={href}
-      className={`scale-110 px-6 py-3 duration-200 ${IconLinkVariantClass}`}
+      className={`scale-110 px-4 py-3 duration-200 sm:px-6 ${IconLinkVariantClass}`}
     >
       <Image src={src} alt={alt} />
     </Link>
