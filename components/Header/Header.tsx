@@ -1,5 +1,6 @@
 import Navigation from './Navigation';
 import SocialIcons from '../Common/SocialIcons';
+import NavigationMobile from './NavigationMobile';
 
 export default function header() {
   return (

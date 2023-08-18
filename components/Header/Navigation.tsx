@@ -3,6 +3,8 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
+import Hamburger from './Hamburger';
+import NavigationMobile from './NavigationMobile';
 
 export default function Navigation() {
   const pathname = usePathname();
@@ -13,36 +15,57 @@ export default function Navigation() {
     { href: '/portfolio', name: 'portfolio' },
   ];
 
-  // const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  const [isHamburgerOpen, setIsHamburgerOpen] = useState<boolean>(false);
 
-  // useEffect(() => {
-  //   function checkSize() {
-  //     setIsMobile(window.innerWidth <= 768);
-  //   }
-  //   checkSize();
+  const onHamburgerClick = () => {
+    setIsHamburgerOpen(!isHamburgerOpen);
+  };
 
-  //   window.addEventListener('resize', checkSize);
+  useEffect(() => {
+    // Define the checking function
+    function checkSize() {
+      setIsMobile(window.innerWidth < 640);
+    }
 
-  //   // Clean up event listener on unmount
-  //   return () => window.removeEventListener('resize', checkSize);
-  // }, []);
+    // Initial check
+    checkSize();
 
-  return (
-    <div className="relative mx-3 h-[8vw] w-[8vw] before:absolute before:bottom-2 before:left-1/2 before:h-[1.5px] before:w-full before:-translate-x-1/2 before:bg-primary before:transition-all before:duration-300 before:ease-out before:content-[''] after:absolute after:left-1/2 after:top-2 after:h-[1.5px] after:w-full after:-translate-x-1/2 after:bg-primary after:transition-all after:duration-300 after:ease-out after:content-['']"></div>
+    // Add event listener
+    window.addEventListener('resize', checkSize);
 
-    // <nav className="nav text-xl sm:flex">
-    //   {navLinks.map((link) => {
-    //     const isActive = pathname === link.href;
-    //     return (
-    //       <Link
-    //         key={link.name}
-    //         href={link.href}
-    //         className={`${isActive ? 'text-primary' : ''}`}
-    //       >
-    //         {link.name}
-    //       </Link>
-    //     );
-    //   })}
-    // </nav>
-  );
+    // Clean up event listener on unmount
+    return () => {
+      window.removeEventListener('resize', checkSize);
+    };
+  }, []);
+
+  if (isMobile) {
+    return (
+      <>
+        <Hamburger
+          isHamburgerOpen={isHamburgerOpen}
+          onHamburgerClick={onHamburgerClick}
+        />
+        <NavigationMobile isHamburgerOpen={isHamburgerOpen} />
+      </>
+    );
+  } else {
+    return (
+      <nav id="nav" className="nav text-xl sm:flex">
+        {navLinks.map((link) => {
+          const isActive = pathname === link.href;
+          return (
+            <Link
+              key={link.name}
+              href={link.href}
+              className={`${isActive ? 'text-primary' : ''}`}
+            >
+              {link.name}
+            </Link>
+          );
+        })}
+      </nav>
+    );
+  }
 }
