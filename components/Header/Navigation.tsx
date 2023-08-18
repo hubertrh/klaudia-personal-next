@@ -2,6 +2,9 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useState, useEffect } from 'react';
+import Hamburger from './Hamburger';
+import NavigationMobile from './NavigationMobile';
 
 export default function Navigation() {
   const pathname = usePathname();
@@ -12,20 +15,57 @@ export default function Navigation() {
     { href: '/portfolio', name: 'portfolio' },
   ];
 
-  return (
-    <nav className="nav flex text-xl">
-      {navLinks.map((link) => {
-        const isActive = pathname === link.href;
-        return (
-          <Link
-            key={link.name}
-            href={link.href}
-            className={`${isActive ? 'text-primary' : ''}`}
-          >
-            {link.name}
-          </Link>
-        );
-      })}
-    </nav>
-  );
+  const [isMobile, setIsMobile] = useState(false);
+  const [isHamburgerOpen, setIsHamburgerOpen] = useState<boolean>(false);
+
+  const onHamburgerClick = () => {
+    setIsHamburgerOpen(!isHamburgerOpen);
+  };
+
+  useEffect(() => {
+    // Define the checking function
+    function checkSize() {
+      setIsMobile(window.innerWidth < 640);
+    }
+
+    // Initial check
+    checkSize();
+
+    // Add event listener
+    window.addEventListener('resize', checkSize);
+
+    // Clean up event listener on unmount
+    return () => {
+      window.removeEventListener('resize', checkSize);
+    };
+  }, []);
+
+  if (isMobile) {
+    return (
+      <>
+        <Hamburger
+          isHamburgerOpen={isHamburgerOpen}
+          onHamburgerClick={onHamburgerClick}
+        />
+        <NavigationMobile isHamburgerOpen={isHamburgerOpen} />
+      </>
+    );
+  } else {
+    return (
+      <nav id="nav" className="nav text-xl sm:flex">
+        {navLinks.map((link) => {
+          const isActive = pathname === link.href;
+          return (
+            <Link
+              key={link.name}
+              href={link.href}
+              className={`${isActive ? 'text-primary' : ''}`}
+            >
+              {link.name}
+            </Link>
+          );
+        })}
+      </nav>
+    );
+  }
 }
