@@ -16,22 +16,18 @@ export default function Navigation() {
   ];
 
   const [isMobile, setIsMobile] = useState(false);
-  const [isHamburgerOpen, setIsHamburgerOpen] = useState<boolean>(false);
+  const [isHamburgerOpen, setIsHamburgerOpen] = useState(false);
 
   const onHamburgerClick = () => {
     setIsHamburgerOpen(!isHamburgerOpen);
   };
 
   useEffect(() => {
-    // Define the checking function
     function checkSize() {
       setIsMobile(window.innerWidth < 640);
     }
-
-    // Initial check
     checkSize();
 
-    // Add event listener
     window.addEventListener('resize', checkSize);
 
     // Clean up event listener on unmount
