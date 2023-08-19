@@ -43,7 +43,10 @@ export default function Navigation() {
           isHamburgerOpen={isHamburgerOpen}
           onHamburgerClick={onHamburgerClick}
         />
-        <NavigationMobile isHamburgerOpen={isHamburgerOpen} />
+        <NavigationMobile
+          isHamburgerOpen={isHamburgerOpen}
+          onHamburgerClick={onHamburgerClick}
+        />
       </>
     );
   } else {
