@@ -19,6 +19,9 @@ module.exports = {
         500: '5',
         700: '7',
       },
+      height: {
+        dvh: '100dvh',
+      },
     },
   },
   plugins: [],

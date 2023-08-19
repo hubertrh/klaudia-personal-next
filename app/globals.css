@@ -33,5 +33,5 @@ p {
 }
 
 #nav-mobile > * {
-  @apply before:absolute before:bottom-5 before:left-1/2 before:h-[1.5px] before:w-0 before:-translate-x-1/2 before:bg-primary before:transition-all before:duration-300 before:ease-out before:content-[''];
+  @apply px-8 py-4 before:absolute before:bottom-5 before:left-1/2 before:h-[1.5px] before:w-0 before:-translate-x-1/2 before:bg-primary before:transition-all before:duration-300 before:ease-out before:content-[''];
 }

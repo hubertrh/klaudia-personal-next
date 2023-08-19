@@ -17,7 +17,7 @@ export default function SocialIcons({ isFooter }: SocialIconsProps) {
         alt="Instagram icon"
         isFooter={isFooter}
       />
-      <IconLink
+      {/* <IconLink
         href="https://www.facebook.com/klaudiarogalaphotographer/"
         src={fbIcon}
         alt="Facebook icon"
@@ -28,7 +28,7 @@ export default function SocialIcons({ isFooter }: SocialIconsProps) {
         src={ytIcon}
         alt="YouTube icon"
         isFooter={isFooter}
-      />
+      /> */}
       <IconLink
         href="https://www.pinterest.com/zuzannnnaa/"
         src={pinIcon}
