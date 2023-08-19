@@ -7,7 +7,7 @@ export default async function Hero() {
   const heroEntry: HeroEntry | null = await getHeroEntry();
 
   return (
-    <section className="grid h-screen place-items-center">
+    <section className="grid h-dvh place-items-center">
       <Image
         className="h-min max-h-[60vh] w-min translate-y-5 object-contain sm:max-w-[60vw]"
         src={heroEntry?.heroImage.url || klaudiaHeroImage}
